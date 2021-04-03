@@ -73,7 +73,6 @@ createServer(function (req, res) {
         else{
             switch (Type) {
                 case 'webp':
-                    // CreateWebp(Resizing, quality, body);
                     // console.log("Image Webp", Resizing, quality);
                     const WebpImage = sharp(body);
                     WebpImage
@@ -103,7 +102,6 @@ createServer(function (req, res) {
             
                 case 'jpg':
                 case 'jpeg':
-                    // CreateWebp(Resizing, quality, body);
                     // console.log("Image JPG", Resizing, quality);
                     const JpgImage = sharp(body);
                     JpgImage
@@ -166,33 +164,5 @@ createServer(function (req, res) {
             }
         }
     });
-
-
-    // function CreateWebp(size, quality, body) {
-    //     // var size = null;
-    //     console.log("Image Webp", size, quality);
-    //     const image = sharp(body);
-    //         image
-    //         .metadata()
-    //         .then(function(metadata) {
-    //             return image
-    //             .resize(size)
-    //             .webp({quality: quality})
-    //             .toBuffer();
-    //         })
-    //         .then(function(data) {
-    //             res.writeHead(200, {
-    //                 'Content-Type': 'image/webp',
-    //                 'Content-Length': data.length
-    //             });
-    //             res.write(data);
-    //             res.end();
-    //         })
-    //         .catch((err)=>{
-    //             res.writeHead(200, {'content-type': 'text/html'});
-    //             res.write("<h2>Failed To Create Image</h2>");
-    //             res.end();
-    //         });
-    // }
       
 }).listen(8080);
