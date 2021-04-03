@@ -63,8 +63,6 @@ createServer(function (req, res) {
         }
     }
 
-
-    var ImageUrl='https://www.dealsmagnet.com/images/15Ptr1iq/2021/March/24/large/storyhome-10-inch-round-shape-wall-clock-with-glas.jpg';
     request({url : query.image, encoding:null}, function(error, response, body) {
         if (error) {
             res.writeHead(200, {'content-type': 'text/html'});
